@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+a {
+  text-decoration: none;
+  text-transform: none;
+  color: black;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+}
+#burger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: rgb(255, 0, 0);
+}
+.nav__link li a {
+  display: inline-block;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__link li a {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+.nav__link li a:hover {
+  border-bottom: 1px solid #2f01ff;
+  border-top: 1px solid #2f01ff;
+  color: darkgreen;
+}
+
+/* ----------------------Header */
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 22px 0 26px;
+  position: relative;
+}
+.nav__link {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.nav__link a {
+  color: rgb(107, 107, 107);
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+
+/* ----------------------Promo */
+
+.promo {
+  background-image: url(../images/yellow_girl.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.promo__content {
+  text-align: end;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 3.3s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.promo__content:not(.animate) {
+  animation: none;
+}
+.promo__content h1 {
+  /* max-width: 575px; */
+  font-size: 72px;
+  line-height: 110%;
+  font-family: "Roboto";
+  color: #fff;
+  padding-top: 197px;
+  font-weight: 400;
+}
+.promo__content p {
+  max-width: 566px;
+  margin-left: auto;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 160%;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 88px;
+  font-weight: 400;
+}
+.button {
+  width: 180px;
+  padding: 16px 42px;
+  margin: 40px auto 137px;
+  color: #fff;
+  background-color: rgb(255, 31, 31);
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 14px;
+  border-color: rgb(255, 31, 31);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: rgb(250, 68, 68);
+  border-color: rgb(250, 68, 68);
+}
+
+/*----------------Jump  */
+
+.jump__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: space-between;
+}
+.jump__container img {
+  width: 55%;
+}
+.content__left {
+  display: flex;
+  flex-direction: column;
+}
+.top__left {
+  background-color: rgb(215, 219, 219);
+  padding: 90px 0 113px 40px;
+}
+.top__left h2 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 110%;
+}
+.top__left p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 120%;
+  margin-top: 35px;
+}
+.bot__left {
+  padding: 70px 0 35px 40px;
+}
+.bot__left h5 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.bot__left p {
+  max-width: 490px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Roboto";
+  line-height: 160%;
+  margin-top: 10px;
+}
+.Join_btn {
+  width: 180px;
+  padding: 16px 42px;
+  margin: 40px auto 137px;
+  color: #fff;
+  background-color: rgb(255, 31, 31);
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  border-color: rgb(255, 31, 31);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.Join_btn:hover {
+  background-color: rgb(250, 68, 68);
+  border-color: rgb(250, 68, 68);
+}
+
+/* ------------------------Team coachers */
+
+.coaches__container h2 {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  margin-bottom: 88px;
+  margin-top: 30px;
+}
+.title__coaches {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+}
+#img {
+  width: 210px;
+  border-radius: 50%;
+  height: 210px;
+}
+.title__coaches_coaches {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* --------------Promo people */
+
+.promo__images {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  flex-wrap: wrap;
+  padding: 70px 0 0;
+}
+
+.promo__images img {
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.promo__images img:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+/* -------------------Footer */
+
+.footer {
+  background-image: url(../images/close-up-woman-training.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 61px;
+}
+.footer h2 {
+  color: #fff;
+}
+.footer p {
+  font-family: "Open Sans";
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+.footer__form {
+  padding-top: 167px;
+  padding-bottom: 225px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+}
+.form__ {
+  border-radius: 50px;
+  padding: 10px 10px;
+}
+#submit {
+  border-radius: 50px;
+  padding: 10px 10px;
+  background-color: rgba(228, 66, 101, 0.57);
+  color: #fff;
+  border-color: rgba(240, 70, 78, 0.57);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+#submit:hover {
+  color: red;
+  background-color: rgba(252, 168, 203, 0.747);
+}
+.footer__form h2,
+p,
+.form__ {
+  margin-bottom: 25px;
+}

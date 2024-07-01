@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+a {
+  text-decoration: none;
+  text-transform: none;
+  color: black;
+}
+
+h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+}
+#burger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: rgb(255, 0, 0);
+}
+.nav__link li a {
+  display: inline-block;
+  transition: .3s ease-in-out;
+}
+
+.nav__link li a  {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+.nav__link li a:hover {
+  border-bottom: 1px solid #2f01ff;
+  border-top: 1px solid #2f01ff;
+  color: darkgreen;
+}
+
+/* ----------------------Header */
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 22px 0 26px;
+  position: relative;
+}
+.nav__link {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.nav__link a {
+  color: rgb(107, 107, 107);
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+}
+
+/* ----------------------Promo */
+
+.promo {
+  background-image: url(../images/BG.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.promo__content {
+  opacity: 0;
+  transform: translateY(0px);
+  animation: fadeInUp 3.3s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.promo__content:not(.animate) {
+  animation: none;
+}
+.promo__content h1 {
+  max-width: 575px;
+  font-size: 72px;
+  line-height: 110%;
+  font-family: "Roboto";
+  color: #fff;
+  padding-top: 197px;
+  font-weight: 400;
+}
+.promo__content p {
+  max-width: 440px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 160%;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 88px;
+  font-weight: 400;
+}
+.promo__content span {
+  color: rgb(250, 212, 45);
+}
+.button {
+  width: 200px;
+  padding: 15px 60px;
+  margin-bottom: 60px;
+  color: black;
+  background-color: rgb(250, 212, 45);
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  border-color: rgb(250, 212, 45);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.button:hover {
+  color: #fff;
+  background-color: rgb(221, 0, 0);
+  border-color: rgb(221, 0, 0);
+}
+
+/* --------------Promo people */
+
+.promo__images img {
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+}
+.promo__images img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.promo__images {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  flex-wrap: wrap;
+  padding: 70px 0;
+}
+
+/* ----------------------How to start */
+
+.top__start {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.top__start h2 {
+  color: black;
+  padding-left: 10px;
+}
+.bot__start {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+.left__start p {
+  max-width: 500px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 220%;
+  color: gray;
+}
+.right__start {
+  background-color: rgba(235, 232, 232, 0.37);
+}
+.right__start p {
+  max-width: 550px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 160%;
+  font-weight: 700;
+  color: black;
+  padding: 60px 0 10px 10px;
+}
+.right__start__items {
+  padding: 10px 0px 10px 25px;
+}
+.right__start__items p {
+  display: list-item;
+  padding: 10px 68px 10px 0;
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: rgb(87, 87, 87);
+}
+.right__start__items p::marker {
+  content: "\25ba";
+  color: rgb(255, 238, 0);
+}
+
+/* ------------------------Possibility */
+
+.Possibility {
+  background-image: url(../images/Red_man.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.block__classes {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.block__ {
+  width: 31%;
+  order: 1;
+  /* flex-grow: 1; */
+  opacity: 0.8;
+  /* max-width: 318px; */
+  height: 300px;
+  background-color: rgba(191, 191, 191, 0.44);
+  margin: 20px 0 64px 0;
+  padding: 15px;
+}
+.block__:nth-child(n + 3) {
+  order: 2;
+}
+.block__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.block__top img {
+  width: 70px;
+  padding-left: 100px;
+}
+.block__top p {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.block__ p {
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 120%;
+  max-width: 283px;
+  color: #fff;
+}
+.more {
+  max-width: 145px;
+  padding: 12px 48px;
+  border-color: 1px solid #fff;
+  background-color: #fff;
+  font-family: "Open Sans";
+  border-radius: 30px;
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.more:hover {
+  color: gold;
+}
+
+/* -----------------Luxury */
+
+.Luxury {
+  background-color: rgb(231, 75, 75);
+}
+.Luxury p {
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 120%;
+  color: #fff;
+  margin-bottom: 5px;
+  padding-top: 150px;
+}
+.Luxury h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.Join_btn {
+  width: 189px;
+  padding: 18px 54px;
+  color: black;
+  background-color: rgb(250, 212, 45);
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50px;
+  border-color: rgb(250, 212, 45);
+  cursor: pointer;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
+.Join_btn:hover {
+  background-color: yellow;
+  color: rgb(119, 112, 112);
+}
+
+/* -----------------------Solo */
+
+.Solo_workout_block {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  gap: 50px;
+  padding-bottom: 10px;
+}
+.Solo_workout__right h2 {
+  font-size: 20px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 120%;
+  color: black;
+  padding-bottom: 24px;
+  text-transform: uppercase;
+}
+.Solo_workout__right h3 {
+  font-size: 20px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 120%;
+  color: black;
+  padding-bottom: 24px;
+  text-transform: uppercase;
+}
+.Solo_workout__right p {
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 160%;
+  color: #000;
+  max-width: 431px;
+  padding-bottom: 18px;
+}
+
+.Solo_workout__right .Join_btn:hover {
+  color: #fff;
+  background-color: rgb(221, 0, 0);
+  border-color: rgb(221, 0, 0);
+}
+.Solo_workout__left img {
+  width: 600px;
+  height: 100%;
+}
+
+/* -------------------Voyage */
+
+.Voyage_block {
+  background-image: url(../images/blue_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#quotes {
+  font-size: 105px;
+  color: #fff;
+}
+.voyage__voyage {
+  display: block;
+  text-align: right;
+  padding: 50px 54px;
+}
+.voyage__voyage p {
+  max-width: 493px;
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 24px;
+  line-height: 160%;
+  text-align: center;
+  margin-left: auto;
+  padding-bottom: 88px;
+}
+.voyage__voyage .button {
+  padding: 22px 54px;
+  margin: 20px 134px;
+}
+
+/* -----------------------------Memberships */
+
+.Membership__block {
+  display: flex;
+  padding: 50px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Membership__block__left h2 {
+  max-width: 530px;
+}
+.Membership__block__left p {
+  max-width: 450px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 160%;
+  padding-top: 30px;
+  padding-bottom: 88px;
+}
+.Membership__block__left span {
+  color: rgb(182, 3, 3);
+}
+.Membership__block__right img {
+  width: 500px;
+  height: 100%;
+}
+
+/* ----------------------------Benefits  */
+
+.Benefits {
+  background-image: url(../images/thumb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Benefits h2 {
+  color: #fff;
+  padding-top: 158px;
+  padding-bottom: 30px;
+}
+.Benefits .button {
+  padding: 22px 54px;
+  margin-bottom: 158px;
+}
+
+/* -------------------Footer */
+
+.footer {
+  background-image: url(../images/close-up-woman-training.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer h2 {
+  color: #fff;
+}
+.footer p {
+  font-family: "Open Sans";
+  line-height: 160%;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+.footer__form{
+  padding-top: 167px;
+  padding-bottom: 225px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
+}
+.form__ {
+  border-radius: 50px;
+  padding: 10px 10px;
+}
+#submit {
+  border-radius: 50px;
+  padding: 10px 10px;
+  background-color: rgba(228, 66, 101, 0.57);
+  color: #fff;
+  border-color: rgba(240, 70, 78, 0.57);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+#submit:hover{
+  color: red;
+  background-color: rgba(252, 168, 203, 0.747);
+}
+.footer__form h2 , p , .form__{
+margin-bottom: 25px;
+}
