@@ -238,6 +238,7 @@ h2 {
   gap: 2px;
   flex-wrap: wrap;
   padding: 70px 0 0;
+  overflow: hidden;
 }
 
 .promo__images img {
